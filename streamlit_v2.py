@@ -33,9 +33,9 @@ else:
     intro_text = """
     Autores: Arda Mark, Casey Yoon, Daniel Lampert, Richard Du, Wesley Kwong (5th Year UC Berkeley MIDS)
 
-    La catarata es la principal causa de ceguera en el mundo, con más del 51% de la población mundial afectada. Solo en México, se estima que es la causa del 63% de toda la ceguera y afecta a más de 10 millones de personas. Se caracteriza por un área nublada en el cristalino del ojo que empeora la visión con el tiempo. Creamos esta aplicación que utiliza la IA para permitir que las personas se autodiagnostiquen a sí mismas para la catarata. Sin embargo, recomendamos ver a un profesional médico si es posible.
+    Las cataratas son la principal causa de ceguera en el mundo, con más del 51% de la población mundial afectada. Solo en México, se estima que es la causa del 63% de toda la ceguera y afecta a más de 10 millones de personas. Se caracteriza por un área nublada en el cristalino del ojo que empeora la visión con el tiempo. Creamos esta aplicación que utiliza la inteligencia artificial para permitir que las personas se autodiagnostiquen a sí mismas para las cataratas. Sin embargo, recomendamos ver a un profesional médico si es posible.
 
-    Por favor, inserte una imagen de toda su cara con los ojos tan abiertos como sea posible con accesorios mínimos para la cabeza. Debe haber un deslumbramiento mínimo o nulo en los ojos, ya que esto afectará el diagnóstico.
+    Por favor, sube una foto de toda tu cara con los ojos más abiertos posibles. También es importante que no lleves lentes o otros accesorios para la foto. Debes haber un deslumbramiento mínimo o nulo en los ojos, ya que esto afectará el diagnóstico.
     """
 
 st.write(intro_text)
@@ -49,9 +49,9 @@ if language == 'English':
     st.success('Thank you for inputting a picture! Please wait a few moments for your result.')
 else:
     if not uploaded_file:
-        st.warning('Por favor, introduzca una imagen de arriba.')
+        st.warning('Por favor, introduce una imagen de arriba.')
         st.stop()
-    st.success('Gracias por introducir una foto! Por favor, espere unos momentos para su resultado.')
+    st.success('Gracias por introducir una foto! Por favor, espera unos momentos para tu resultado.')
 
 file_array = imageio.imread(uploaded_file)
 landmarks = extract_face_landmarks(file_array)
@@ -203,7 +203,7 @@ else:
     st.header("Mapeo de saliencia")
 
     saliency_text = """
-    ¿Qué está mirando el modelo de IA? El mapa de prominencia revela qué píxeles considera importantes el modelo durante el diagnóstico de cataratas.
+    ¿Qué está mirando el modelo de inteligencia artificial? El mapa de prominencia revela qué píxeles considera importantes el modelo durante el diagnóstico de cataratas.
     """
 
 st.write(saliency_text)
@@ -270,12 +270,12 @@ if language == 'English':
     st.write(organization_text)
 
 else:
-    st.header("¿Qué debe hacer si tiene cataratas?")
+    st.header("¿Qué debes hacer si tienes cataratas?")
 
     prevention_text = """
-    Recomendamos encarecidamente buscar un profesional médico para un mayor seguimiento y tratamiento.
+    Recomendamos buscar un profesional médico para un mayor seguimiento y tratamiento.
 
-    Sin embargo, si no puede acceder al tratamiento médico, le recomendamos lo siguiente para retardar la progresión de la catarata:
+    Sin embargo, si no puedes acceder un tratamiento médico, te recomendamos lo siguiente para retardar la progresión de las cataratas:
     - Dejar de fumar
     - Comer muchas frutas y verduras
     - Usar gafas de sol
