@@ -184,6 +184,8 @@ else:
 
         if left_pred_class == "Cataract":
             left_pred_class = "Catarata"
+        if left_pred_class == "Normal":
+            left_pred_class = "Habitual"
 
         left_result_caption = "Predicción: **{0}** con una probabilidad de {1}".format(left_pred_class, left_prob_rounded)
         st.image(left_eye_rescaled)
@@ -195,6 +197,8 @@ else:
 
         if right_pred_class == "Cataract":
             right_pred_class = "Catarata"
+        if right_pred_class == "Normal":
+            right_pred_class = "Habitual"
 
         right_result_caption = "Predicción: **{0}** con una probabilidad de {1}".format(right_pred_class, right_prob_rounded)
         st.image(right_eye_rescaled)
